@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Live2D Demo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #canvas {
+      width: 1200px;
+      height: 600px;
+      border: 2px solid #444;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .controls {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 10;
+    }
+    .controls button {
+      margin: 4px;
+      padding: 6px 12px;
+    }
+
+    textarea{
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="1200" height="600"></canvas>
+
+  <div class="controls">
+    <button onclick="playMotion()">モーション（きをつけ）</button>
+    <select id="mo">
+      <option value="0" selected>0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+      <option value="16">16</option>
+      <option value="17">17</option>
+      <option value="18">18</option>
+      <option value="19">19</option>
+      <option value="20">20</option>
+      <option value="21">21</option>
+      <option value="22">22</option>
+      <option value="23">23</option>
+      <option value="24">24</option>
+      <option value="25">25</option>
+    </select><br>
+    <button onclick="momotaro()">桃太郎(用意したwavを読み上げる)</button><br>
+    <button onclick="readText()">読み上げ（合成音声）</button><br>
+    <textarea name="read" id="read" >むかしむかしあるところにおじいさんとおばあさんがいたのだ</textarea>
+  </div>
+
+  <!-- Pixi.js -->
+  <script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.2/dist/browser/pixi.min.js"></script>
+
+  <!-- Live2D Cubism Core -->
+  <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
+
+  <!-- pixi-live2d-display for Cubism 4 -->
+  <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/cubism4.min.js"></script>
+
+  <!-- main script -->
+  <script src="haru.js"></script>
+</body>
+</html>
